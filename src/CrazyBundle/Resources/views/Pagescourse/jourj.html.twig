@@ -1,0 +1,92 @@
+{% extends 'crazytemplate.html.twig' %}
+
+{% block title %}- Infos : le Jour J{% endblock %}
+
+{% block body %}
+<section class="bande-01">
+	<div class="container">
+		<h1>Le Jour J</h1>
+
+		<p class="text-center">Le <span class="vert">Crazy Disco Trail</span> se tiendra le 4 novembre 2017 !</p>
+
+	</div><!-- /.container -->
+</section><!-- /.bande-01 -->
+
+<section class="bande-02">
+	<div class="container">
+		<h2>Départ et Arrivée</h2>
+
+		<p class="text-center">Le Haras National de SAINT-LO<br />
+		AVENUE DU MARECHAL JUIN<br />
+		50000 SAINT-LO</p>
+		<img src="{{ asset('img/haras.png') }}" alt="" title="" class="img-responsive center-block" />
+							
+		
+	</div><!-- /.container -->
+</section><!-- /.bande-02 -->
+
+<section class="bande-01">
+	<div class="container">
+		<h2>Programme</h2>
+		<div class="row vertical-align">
+			<div class="col-xs-12 col-md-6">
+				
+				<p>Dès 18 heures, un DJ SET avec du <strong class="vert">GROS GROS Son</strong>, sur une scène spécialement montée pour l’évènement au milieu d’une salle UNIQUE.</p>
+
+				<p>Echauffement de folie, à chaque départ de vague <span class="rose">M</span><span class="vert">U</span><span class="orange">L</span><span class="bleu">T</span><span class="jaune">I</span><span class="rose">C</span><span class="bleu">O</span><span class="jaune">L</span><span class="orange">O</span><span class="vert">R</span><span class="rose">E</span>.</p>
+
+				<table class="table table-bordered table-hover table-condensed text-center">
+					<tr>
+						<td>VAGUE  1</td>
+						<td>19h00</td>
+					</tr>
+					<tr>
+						<td>VAGUE  2</td>
+						<td>19h30</td>
+					</tr>
+					<tr>
+						<td>VAGUE  3</td>
+						<td>20h00</td>
+					</tr>
+					<tr>
+						<td>VAGUE  4</td>
+						<td>20h30</td>
+					</tr>
+					<tr>
+						<td>VAGUE  5</td>
+						<td>21h00</td>
+					</tr>
+				</table>
+
+				<p>Fermeture du « village Crazy » à  minuit 30 ; les chevaux ont le droit de dormir, eux aussi...</p>
+
+
+				
+			</div><!-- /.col -->
+
+			<div class="col-xs-12 col-md-6">
+				<img src="{{ asset('img/haras-interieur.png') }}" alt="" title="" class="img-responsive center-block" />
+			</div><!-- /.col -->
+
+		</div><!-- /.row -->
+	
+		
+	</div><!-- /.container -->
+</section><!-- /.bande-01 -->
+
+<section class="bande-02">
+	<div class="container">
+		<h2>Kit Participant</h2>
+
+		<p class="text-center">Chaque Ambianceur/coureur recevra, le jour J, son package Crazy disco Trail :<br />
+		- Son bracelet personnalisé, des accessoires fluo...<br />
+		- Au retrait des « dossards » , un tee shirt INEDIT !!!!!</p>
+
+		<p class="text-center">Fais preuve d’imagination et habille toi de ta tenue la <span class="bleu">plus fluo</span>, la <span class="vert">plus brillante</span>, la <span class="jaune">plus clignotante !</span></p>
+		
+							
+		
+	</div><!-- /.container -->
+</section><!-- /.bande-02 -->
+
+{% endblock %}

@@ -8,10 +8,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class PagesController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="home")
      */
     public function indexAction()
     {
         return $this->render('CrazyBundle:Pagesinternes:index.html.twig');
     }
+
 }

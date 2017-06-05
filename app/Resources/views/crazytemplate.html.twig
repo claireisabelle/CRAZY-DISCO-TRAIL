@@ -4,7 +4,7 @@
         <meta charset='UTF-8'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>{% block title %}Crazy Disco Trail {% endblock %}</title>
+        <title>Crazy Disco Trail {% block title %} {% endblock %}</title>
 
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
@@ -25,7 +25,7 @@
 
             <head>
                 <div class="logo vertical-align-logo">
-                        <img src="img/logo-2017-txt.png" class="img-responsive center-block" alt="" title="" />
+                        <img src="{{ asset('img/logo-2017-txt.png') }}" class="img-responsive center-block" alt="" title="" />
                 </div><!-- /.logo -->
 
             </head>
@@ -48,14 +48,14 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul class="nav navbar-nav">
-                                <li class="active"><a href="#">ACCUEIL</a></li>
+                                <li class="{% if app.request.get('_route') == 'home' %} active {% endif %}"><a href="{{ path('home') }}">ACCUEIL</a></li>
                                 <li><a href="#">ACTUALITES</a></li>
                                 <li><a href="#">INSCRIPTION</a></li>
                                 <li><a href="#">INSCRITS</a></li>
-                                <li class="dropdown">
+                                <li class="dropdown {% if app.request.get('_route') starts with 'infos' %} active {% endif %}">
                                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INFOS <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
-                                    <li><a href="#">Le Jour J</a></li>
+                                    <li><a href="{{ path('infos_jourj') }}">Le Jour J</a></li>
                                     <li><a href="#">Retrait des dossards</a></li>
                                     <li><a href="#">Accès</a></li>
                                     <li><a href="#">Réglement</a></li>
@@ -86,11 +86,11 @@
                     <div class="row">
                         <div class="col-xs-6 col-md-4">
                             <ul>
-                                <li><a href="">Accueil</a></li>
+                                <li><a href="{{ path('home') }}">Accueil</a></li>
                                 <li><a href="">Actualités</a></li>
                                 <li><a href="">Inscription</a></li>
                                 <li><a href="">Inscrits</a></li>
-                                <li><a href="">Infos</a></li>
+                                <li><a href="{{ path('infos') }}">Infos</a></li>
                                 <li><a href="">Galerie</a></li>
                                 <li><a href="">Contact</a></li>
                                 <li><a href="">Mentions légales</a></li>
