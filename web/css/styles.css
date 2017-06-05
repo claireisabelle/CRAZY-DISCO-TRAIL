@@ -1,0 +1,306 @@
+/*
+ *
+ * 1 - Généralités
+ * 2 - Header
+ * 3 - Navbar
+ * 4 - Réglage du Toggle
+ * 5 - Content
+ *
+ */
+
+
+
+/*
+ *
+ * 1 - Généralités
+ *
+ */
+
+body{
+	background-image: url('../img/fondv4.jpg') !important;
+	background-position: top center !important;
+	background-repeat: no-repeat;
+	margin: 0px !important;
+}
+
+.rose{
+	color: #ff13a4;
+}
+
+.bleu{
+	color: #00FFE9;
+}
+
+.vert{
+	color: #66FF33;
+}
+
+.orange{
+	color: #FF4E00;
+}
+
+.jaune{
+	color: #ffff01;
+}
+
+.btn-primary{
+	background-color: #00B8AB !important;
+	color: #ffffff;
+  	border-color: #00B8AB !important;
+  	font-family: arial, sans-serif !important;
+}
+
+.btn-primary:hover{
+	background-color: #00FFE9 !important;
+}
+
+.btn-success{
+	background-color: #ff13a4 !important;
+	color: #ffffff !important;
+  	border-color: #f30e9a !important;
+  	font-family: arial, sans-serif !important;
+}
+
+.btn-success:hover{
+	background-color: #f30e9a !important;
+}
+
+.btn-warning{
+	background-color: #ffff01 !important;
+	color: #ff22dd !important;
+  	border-color: #f4f62d !important;
+  	font-family: arial, sans-serif !important;
+}
+
+.btn-warning:hover{
+	background-color: #e4e700 !important;
+}
+
+.container-fluid {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.row{
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+
+/*
+ *
+ * 2 - Header
+ *
+ */
+
+
+
+
+.logo{
+	background-color: rgba(0,0,0,0.25);
+	min-height: 400px;
+}
+
+.vertical-align-logo {
+	    display: flex;
+	    align-items: center;
+	}
+
+@media (min-width: 768px) {
+
+	.vertical-align {
+	    display: flex;
+	    align-items: center;
+	}
+
+}
+
+/*
+ *
+ * 3 - Navbar
+ *
+ */
+
+.navbar {
+    border-radius: 0px !important;
+}
+
+.navbar-default {
+  background-color: #161616 !important;
+ }
+
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #F24559 !important;
+  background-color: transparent;
+  border-top: solid 2px #F24559 !important;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #F24559;
+  background-color: transparent !important;
+  border-top: solid 2px #F24559 !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #2F2F2F !important;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #2F2F2F !important;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #2F2F2F !important;
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+color: #ffffff !important;
+background-color: #F24559 !important;
+}
+
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+
+/**
+ *
+ * 4 - Réglage du Toggle
+ *
+ */
+
+ @media (max-width: 1000px) { /* Remplacez 123px par la taille de votre choix */
+	.navbar-header {
+	float: none;
+	}
+	.navbar-toggle {
+	display: block;
+	}
+	.navbar-collapse {
+	border-top: 1px solid transparent;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+	.navbar-collapse.collapse {
+	display: none!important;
+	}
+	.navbar-nav {
+	float: none!important;
+	margin: 7.5px -15px;
+	}
+	.navbar-nav>li {
+	float: none;
+	}
+	.navbar-nav>li>a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+	.navbar-text {
+	float: none;
+	margin: 15px 0;
+	}
+	/* cette classe est Ã  ajouter lorsque que vous utilisez une version de Bootstap supÃ©rieure ou Ã©gale Ã  la 3.1.0 */
+	.navbar-collapse.collapse.in { 
+	display: block!important;
+	}
+	.collapsing {
+	overflow: hidden!important;
+	}
+}
+
+
+/*
+ *
+ * 5 - Content
+ *
+ */
+
+ .content{
+ 	width: 100%;
+ 	min-height: 800px;
+ 	background-color: #222222; 
+ 	
+ }
+
+ .bandes h1{
+ 	text-align: center;
+ 	text-transform: uppercase;
+ 	font-family: 'Roboto Condensed', sans-serif;
+ 	margin-right: 0px !important;
+ 	margin-left: 0px !important;
+ }
+
+ .bandes h1:after{
+ 	content: url('../img/tiret.png');
+ 	display: block;
+ 	margin-bottom: 30px;
+ }
+
+ .bandes h2{
+ 	text-align: center;
+ 	text-transform: uppercase;
+ 	font-family: 'Roboto Condensed', sans-serif;
+ 	margin-right: 0px !important;
+ 	margin-left: 0px !important;
+ }
+
+ .bandes h2:after{
+ 	content: url('../img/tiret.png');
+ 	display: block;
+ 	margin-bottom: 30px;
+ }
+
+ .bandes p{
+ 	color: #B8B8B8;
+ 	font-size: 1.3em;
+ 	font-family: 'Josefin Sans', sans-serif;
+ 	margin-right: 0px !important;
+ 	margin-left: 0px !important;
+ }
+
+ .bande-01{
+ 	margin-bottom: 40px;
+ }
+
+
+
+ .bande-02{
+ 	background-color: #111619;
+ 	padding-bottom: 40px;
+ 	padding-top: 30px;
+ }
+
+
+/*
+ *
+ * 6 - Footer
+ *
+ */
+
+.footer{
+	background-color: #000000;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+}
+
+.footer ul{
+	list-style-type: none;
+}
