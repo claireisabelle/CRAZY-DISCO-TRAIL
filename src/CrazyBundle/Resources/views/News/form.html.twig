@@ -1,0 +1,33 @@
+	{{ form_start(form) }}
+
+
+		{{ form_errors(form) }}
+
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<div class="form-group">
+					{{ form_label(form.titre, "Titre", {'label_attr': {'class': 'control-label'}}) }}
+	      			{{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+				</div><!-- /.form-group -->
+
+				<div class="form-group">
+					{{ form_label(form.contenu, "Contenu", {'label_attr': {'class': 'control-label'}}) }}
+	      			{{ form_widget(form.contenu, {'attr': {'class': 'form-control'}}) }}
+				</div><!-- /.form-group -->
+				
+
+				{{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+
+			</div><!-- /.col -->
+
+		</div><!-- /.row -->
+		
+
+		{{ form_rest(form) }}
+
+
+	{{ form_end(form) }}
+
+
+
+

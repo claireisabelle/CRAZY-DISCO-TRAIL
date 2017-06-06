@@ -75,3 +75,11 @@ assetic:
     use_controller: '%kernel.debug%'
     filters:
         cssrewrite: ~
+
+# Ivory CKEditor
+ivory_ck_editor:
+    configs:
+        my_config:
+            toolbar: [[TextColor', 'BGColor', '-', 'Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat', '-', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'], "/", ['Link', 'Unlink', '-', 'NumberedList', 'BulletedList', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'Image', 'Table', 'Smiley' ], "/", ['FontSize', '-', 'Source']]
+            uiColor:                "#D0D0D0"
+            language: fr
