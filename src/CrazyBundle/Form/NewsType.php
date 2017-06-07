@@ -20,7 +20,16 @@ class NewsType extends AbstractType
     {
         $builder
         ->add('titre', TextType::class)
-        ->add('contenu', CKEditorType::class)
+        ->add('contenu', CKEditorType::class, array(
+            'config' => array(
+                'filebrowserBrowseRoute' => 'elfinder',
+                'filebrowserBrowseRouteParameters' => array(
+                    'instance' => 'default',
+                    'homeFolder' => ''
+                    )
+                )
+            )
+        )
         ->add('save', SubmitType::class, array('label' => 'Valider'))
         ;
     }

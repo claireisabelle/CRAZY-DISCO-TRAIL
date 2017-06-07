@@ -49,22 +49,22 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul class="nav navbar-nav">
                                 <li class="{% if app.request.get('_route') == 'home' %} active {% endif %}"><a href="{{ path('home') }}">ACCUEIL</a></li>
-                                <li><a href="#">ACTUALITES</a></li>
-                                <li><a href="#">INSCRIPTION</a></li>
-                                <li><a href="#">INSCRITS</a></li>
+                                <li class="{% if app.request.get('_route') starts with 'actualites' %} active {% endif %}"><a href="{{ path('actualites')}}">ACTUALITES</a></li>
+                                <li class="{% if app.request.get('_route') == 'inscription' %} active {% endif %}"><a href="{{ path('inscription') }}">INSCRIPTION</a></li>
+                                <li class="{% if app.request.get('_route') == 'inscrits' %} active {% endif %}"><a href="{{ path('inscrits') }}">INSCRITS</a></li>
                                 <li class="dropdown {% if app.request.get('_route') starts with 'infos' %} active {% endif %}">
                                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INFOS <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
                                     <li><a href="{{ path('infos_jourj') }}">Le Jour J</a></li>
-                                    <li><a href="#">Retrait des dossards</a></li>
-                                    <li><a href="#">Accès</a></li>
-                                    <li><a href="#">Réglement</a></li>
-                                    <li><a href="#">Bon à savoir</a></li>
-                                    <li><a href="#">Questions fréquentes</a></li>
+                                    <li><a href="{{ path('infos_dossards')}}">Retrait des dossards</a></li>
+                                    <li><a href="{{ path('infos_acces') }}">Accès</a></li>
+                                    <li><a href="{{ path('infos_reglement') }}">Réglement</a></li>
+                                    <li><a href="{{ path('infos_savoir') }}">Bon à savoir</a></li>
+                                    <li><a href="{{ path('infos_questions')}}">Questions fréquentes</a></li>
                                   </ul>
                                 </li>
-                                <li><a href="#">GALERIES</a></li>
-                                <li><a href="#">CONTACT</a></li>
+                                <li class="{% if app.request.get('_route') == 'galeries' %} active {% endif %}"><a href="{{ path('galeries') }}">GALERIES</a></li>
+                                <li class="{% if app.request.get('_route') == 'contact' %} active {% endif %}"><a href="{{ path('contact') }}">CONTACT</a></li>
                               </ul>
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container -->
@@ -87,13 +87,13 @@
                         <div class="col-xs-6 col-md-4">
                             <ul>
                                 <li><a href="{{ path('home') }}">Accueil</a></li>
-                                <li><a href="">Actualités</a></li>
-                                <li><a href="">Inscription</a></li>
-                                <li><a href="">Inscrits</a></li>
+                                <li><a href="{{ path('actualites') }}">Actualités</a></li>
+                                <li><a href="{{ path('inscription') }}">Inscription</a></li>
+                                <li><a href="{{ path('inscrits') }}">Inscrits</a></li>
                                 <li><a href="{{ path('infos') }}">Infos</a></li>
-                                <li><a href="">Galerie</a></li>
-                                <li><a href="">Contact</a></li>
-                                <li><a href="">Mentions légales</a></li>
+                                <li><a href="{{ path('galeries') }}">Galerie</a></li>
+                                <li><a href="{{ path('contact') }}">Contact</a></li>
+                                <li><a href="{{ path('mentions')}}">Mentions légales</a></li>
                                 <li><a href=""><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
                             </a></li>
                             </ul>
@@ -108,6 +108,8 @@
                              L'Audacieuse...</a><br />
                              <a href="http://www.traldelangoisse.fr" target="_blank"><i class="fa fa-heartbeat" aria-hidden="true"></i>
                              Le Trail de l'Angoisse...</a></p>
+
+                             <p><br /><em><a href="https://www.arroweb.net">Développement : Arroweb</a></em></p>
 
                         </div><!-- /.col -->
 

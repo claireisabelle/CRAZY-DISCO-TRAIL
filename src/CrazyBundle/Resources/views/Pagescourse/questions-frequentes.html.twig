@@ -1,0 +1,107 @@
+{% extends 'crazytemplate.html.twig' %}
+
+{% block title %}- Infos : Questions fréquentes{% endblock %}
+
+{% block body %}
+<section class="bande-01">
+	<div class="container">
+		<h1>Questions Fréquentes</h1>
+
+		<div class="row vertical-align">
+				<div class="col-xs-12 col-md-6">
+					
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						
+					
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title bleu">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+								Est-ce une course ou une marche ?
+								</a>
+								</h4>
+							</div><!-- /.panel-heading -->
+							<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+								Il ne s’agit pas d’une compétition donc aucune obligation de courir !!!<br />
+								Sautiller, s’amuser, danser, ramper  pour relier chaque station musicale placée chaque kilomètre.	
+								</div><!-- /.panel-body -->
+							</div><!-- /.collapseOne -->
+						</div><!-- /.panel -->
+
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h4 class="panel-title bleu">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Une course nocturne ?
+								</a>
+								</h4>
+							</div><!-- /.panel-heading -->
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<div class="panel-body">
+								Même si ce parcours de 7 km environ  sera devenu le plus lumineux et coloré possible, chaque participant devra disposer d’une lampe frontale individuelle. Le premier départ a été choisi en fonction de l’heure du coucher du soleil...
+								</div><!-- /.panel-body -->
+							</div><!-- /.collapseTwo -->
+						</div><!-- /.panel -->
+
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingThree">
+								<h4 class="panel-title bleu">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								Les animaux sont-ils admis pendant la course ?
+								</a>
+								</h4>
+							</div><!-- /.panel-heading -->
+							<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+								<div class="panel-body">
+								Vos animaux  de compagnie seront plus en sécurité chez vous (feu, bruit, laser...). Ils sont donc interdits sur l’ensemble du parcours (sauf chien guide)
+								</div><!-- /.panel-body -->
+							</div><!-- /.collapseThree -->
+						</div><!-- /.panel -->
+
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingFour">
+								<h4 class="panel-title bleu">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								Les spectateurs sont-ils autorisés ?
+								</a>
+								</h4>
+							</div><!-- /.panel-heading -->
+							<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+								<div class="panel-body">
+								Bien entendu mais sans lampe frontale, ils risquent de se blesser s’ils quittent les zones  de départ et d’arrivée (parcours nature).
+								</div><!-- /.panel-body -->
+							</div><!-- /.collapseFour -->
+						</div><!-- /.panel -->
+
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingFive">
+								<h4 class="panel-title bleu">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+								Y auta-t-il des douches et des toilettes ?
+								</a>
+								</h4>
+							</div><!-- /.panel-heading -->
+							<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+								<div class="panel-body">
+								Pas de douches sur le site mais des W.C
+								</div><!-- /.panel-body -->
+							</div><!-- /.collapseFive -->
+						</div><!-- /.panel -->
+					</div><!-- /.panel-group -->
+
+				</div><!-- /.col -->
+
+				<div class="col-xs-12 col-md-6">
+					<img src="{{ asset('img/crazy-disco-questions2.jpg') }}" class="img-responsive center-block border-gris" alt="" title="" />
+				</div><!-- /.col -->
+
+			</div><!-- /.row -->
+
+	</div><!-- /.container -->
+</section><!-- /.bande-01 -->
+
+
+
+
+{% endblock %}

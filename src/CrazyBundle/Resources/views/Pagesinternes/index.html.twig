@@ -52,12 +52,14 @@
 			<div class="col-xs-12 col-md-6">
 				<h2>Actualités</h2>
 				<p class="text-center">Toute les news de la Crazy Disco Trail !</p>
-				<p class="text-center"><a href="" class="btn btn-success">ACTUALITES</a></p>
-				<p><strong class="rose">19/05/2017 - </strong>Ouverture des inscriptions... <a href="" class="rose">Lire la suite</a></p>
-				<p><strong class="rose">19/05/2017 - </strong>Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes ... <a href="" class="rose">Lire la suite</a></p>
-				<p><strong class="rose">19/05/2017 - </strong> Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes ... <a href="" class="rose">Lire la suite</a></p>
+				<p class="text-center"><a href="{{ path('actualites') }}" class="btn btn-success">ACTUALITES</a></p>
+				
+				{% for news in listeNews %}
+					<p><strong class="rose">{{ news.publication|date("d/m/Y") }} - </strong>{{ news.titre }} <a href="{{ path('actualites_post', {'id': news.id}) }}" class="rose">Lire la suite</a></p>
+				{% endfor %}
+				
 
-				<p><img src="{{ asset('img/illus1.jpg') }}" alt="" title="" class="img-responsive" /></p>
+				<p><img src="{{ asset('img/illus1.jpg') }}" alt="" title="" class="img-responsive border-gris" /></p>
 			</div><!-- /.col -->
 
 		</div><!-- /.row -->

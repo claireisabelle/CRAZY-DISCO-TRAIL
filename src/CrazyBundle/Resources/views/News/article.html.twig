@@ -1,0 +1,38 @@
+{% extends 'crazytemplate.html.twig' %}
+
+{% block title %}- Actualités{% endblock %}
+
+{% block body %}
+<section class="bande-01">
+	<div class="container">
+		<h1>Actualités</h1>
+		<p class="text-center">Retrouvez toutes les actualités : <br />
+		<a href="{{ path('actualites') }}" class="btn btn-success">Toutes les news</a></p>
+
+		
+	</div><!-- /.container -->
+</section><!-- /.bande-01 -->
+
+<section class="bande-02">
+	<div class="container">
+		<h3 class="bleu">{{ news.titre }}</h3>
+		<p><em>Publié le {{ news.publication|date("d/m/Y") }} </em></p>
+
+		<p>{{ news.contenu|raw }}</p>
+
+	</div><!-- /.container -->
+</section><!-- /.bande-02 -->
+
+<section class="bande-01">
+	<div class="container">
+		<p class="text-center"><br /><a href="{{ path('actualites') }}" class="btn btn-success">Toutes les news</a></p>
+
+		
+	</div><!-- /.container -->
+</section><!-- /.bande-01 -->
+
+
+
+
+
+{% endblock %}

@@ -117,5 +117,51 @@ class NewsController extends Controller
 
     }
 
+    /**
+     * @Route("/actualites/post/{id}", name="actualites_post", requirements={"id": "\d+"})
+     */
+    public function postAction($id)
+    {
+        
+        $em = $this->getDoctrine()->getManager();
+
+        $news = $em->getRepository('CrazyBundle:News')->find($id);
+
+        if(!$news)
+        {
+            throw $this->createNotFoundException('La news n° '.$id.' est inconnue.');
+        }
+
+        
+        return $this->render('CrazyBundle:News:article.html.twig', array('news' => $news));
+
+    }
+
+    /**
+     * @Route("/actualites/{page}", name="actualites", requirements={"page": "\d+"}, defaults={"page" = 1})
+     */
+    public function actualitesAction($page)
+    {
+        if ($page < 1) 
+        {
+            throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+        }
+
+        $nbPerPage = 15;
+
+        $em = $this->getDoctrine()->getManager();
+
+        $listeNews = $em->getRepository('CrazyBundle:News')->getNewsPaginator($page, $nbPerPage);
+        
+        $nbPages = ceil(count($listeNews)/$nbPerPage);
+
+        if ($page > $nbPages) 
+        {
+            throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+        }
+
+        return $this->render('CrazyBundle:News:actualites.html.twig', array('listeNews' => $listeNews, 'nbPages' => $nbPages, 'page' => $page));
+    }
+
     
 }

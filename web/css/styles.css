@@ -43,6 +43,22 @@ body{
 	color: #ffff01;
 }
 
+.border-rose{
+	border : solid 1px #ff13a4;
+	padding: 6px;
+}
+
+.border-bleu{
+	border : solid 1px #00FFE9;
+	padding: 6px;
+}
+
+.border-gris{
+	border : solid 1px #464545;
+	padding: 6px;
+}
+
+
 .btn-primary{
 	background-color: #00B8AB !important;
 	color: #ffffff;

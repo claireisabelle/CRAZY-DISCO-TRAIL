@@ -3,6 +3,7 @@
 namespace CrazyBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * NewsRepository
@@ -20,5 +21,32 @@ class NewsRepository extends \Doctrine\ORM\EntityRepository
 		;
 
 		return $qb->getResult();
+	}
+
+	public function getLastNews()
+	{
+		$qb = $this->createQueryBuilder('n')
+			->orderBy('n.publication', 'DESC')
+			->setMaxResults(3)
+			->getQuery()
+		;
+
+		return $qb->getResult();
+	}
+
+	public function getNewsPaginator($page, $nbPerPage)
+	{
+		$query = $this->createQueryBuilder('n')
+		->orderBy('n.publication', 'DESC')
+		->getQuery()
+		;
+
+		$query
+		->setFirstResult(($page-1) * $nbPerPage)
+		->setMaxResults($nbPerPage)
+		;
+
+		// Ne pas oublier le use correspondant
+		return new Paginator($query, true);
 	}
 }

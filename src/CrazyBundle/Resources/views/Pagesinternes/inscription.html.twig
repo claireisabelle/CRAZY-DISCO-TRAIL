@@ -1,0 +1,61 @@
+{% extends 'crazytemplate.html.twig' %}
+
+{% block title %} - Inscription {% endblock%}
+
+{% block body %}
+<section class="bande-01">
+	<div class="container">
+		<h1>Inscription</h1>
+
+		<p class="text-center">Le Crazy Disco Trail aura lieu le samedi 4 novembre 2017 à partir de 19h.</p>
+		<p class="text-center">Les Départs se feront sous forme de vagues, bruyantes et fluorescentes, toutes les 30 minutes.</p>
+
+		<p class="text-center"><a href="" class="btn btn-success">FORMULAIRE D'INSCRIPTION</a></p>	
+		
+		
+		
+	</div><!-- /.container -->
+</section><!-- /.bande-01 -->
+
+<section class="bande-02">
+	<div class="container">
+		<h2>Tarifs d'inscription</h2>
+		<div class="row vertical-align">
+			<div class="col-xs-12 col-md-6">
+				
+				<table class="table table-bordered table-hover table-condensed text-center">
+					<tr class="rose">
+						<td></td>
+						<td>A partir de 16 ans</td>
+						<td>De 12 à 15 ans</td>
+					</tr>
+					<tr>
+						<td class="vert">Les 500 premiers</td>
+						<td>25,00 €</td>
+						<td>16,00 €</td>
+					</tr>
+					<tr>
+						<td class="vert">Les 2000 suivants</td>
+						<td>30,00 €</td>
+						<td>16,00 €</td>
+					</tr>
+					<tr>
+						<td class="vert">A partir de 2501</td>
+						<td>35,00 €</td>
+						<td>16,00 €</td>
+					</tr>
+				</table>
+				<p>Vous pouvez souscrire à l'option "Modification d'inscription" qui vous permettra de changer d’horaire de départ, de  céder ou vendre votre dossard (+5€).</p>
+			</div><!-- /.col -->
+
+			<div class="col-xs-12 col-md-6">
+				<img src="{{ asset('img/concert-crazy-disco.jpg') }}" class="img-responsive center-block border-gris" alt="" title="" />
+			</div><!-- /.col -->
+
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</section><!-- /.bande-02 -->
+
+
+
+{% endblock %}
