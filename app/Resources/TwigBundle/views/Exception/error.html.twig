@@ -1,0 +1,23 @@
+{% extends 'crazytemplate.html.twig' %}
+
+{% block title %}Oups... Erreur {{ status_code }}{% endblock %}
+
+
+{% block body %}
+	<section class="contact">
+		<div class="row">
+
+			<div class="col-12 col-md-10">
+				<h1>Erreur</h1>
+				<p>Mmmm, visiblement une erreur s'est produite... Pas d'inquiétude, la solution n'est pas loin <i class="fa fa-smile-o" aria-hidden="true"></i>
+				</p>
+				<p>Erreur {{ status_code }} -  "{{ status_text }}"</p>
+			</div>
+
+
+		</div>
+
+		
+	</section>
+
+{% endblock %}

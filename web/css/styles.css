@@ -104,6 +104,10 @@ body{
 	margin-right: 0px !important;
 }
 
+.panel-default a:hover, .panel-default a:focus{
+	text-decoration: none !important;
+	color: #ffff01;
+}
 
 /*
  *

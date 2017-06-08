@@ -64,6 +64,7 @@
                                   </ul>
                                 </li>
                                 <li class="{% if app.request.get('_route') == 'galeries' %} active {% endif %}"><a href="{{ path('galeries') }}">GALERIES</a></li>
+                                <li class="{% if app.request.get('_route') == 'benevoles' %} active {% endif %}"><a href="{{ path('benevoles') }}">BENEVOLES</a></li>
                                 <li class="{% if app.request.get('_route') == 'contact' %} active {% endif %}"><a href="{{ path('contact') }}">CONTACT</a></li>
                               </ul>
                             </div><!-- /.navbar-collapse -->
@@ -93,6 +94,7 @@
                                 <li><a href="{{ path('infos') }}">Infos</a></li>
                                 <li><a href="{{ path('galeries') }}">Galerie</a></li>
                                 <li><a href="{{ path('contact') }}">Contact</a></li>
+                                <li><a href="{{ path('benevoles') }}">Bénévoles</a></li>
                                 <li><a href="{{ path('mentions')}}">Mentions légales</a></li>
                                 <li><a href=""><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
                             </a></li>

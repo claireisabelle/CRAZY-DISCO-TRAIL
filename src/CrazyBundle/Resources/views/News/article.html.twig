@@ -3,16 +3,6 @@
 {% block title %}- Actualités{% endblock %}
 
 {% block body %}
-<section class="bande-01">
-	<div class="container">
-		<h1>Actualités</h1>
-		<p class="text-center">Retrouvez toutes les actualités : <br />
-		<a href="{{ path('actualites') }}" class="btn btn-success">Toutes les news</a></p>
-
-		
-	</div><!-- /.container -->
-</section><!-- /.bande-01 -->
-
 <section class="bande-02">
 	<div class="container">
 		<h3 class="bleu">{{ news.titre }}</h3>
@@ -25,7 +15,9 @@
 
 <section class="bande-01">
 	<div class="container">
-		<p class="text-center"><br /><a href="{{ path('actualites') }}" class="btn btn-success">Toutes les news</a></p>
+		<h1>Actualités</h1>
+		<p class="text-center">Retrouvez toutes les actualités : <br />
+		<a href="{{ path('actualites') }}" class="btn btn-success">Toutes les news</a></p>
 
 		
 	</div><!-- /.container -->

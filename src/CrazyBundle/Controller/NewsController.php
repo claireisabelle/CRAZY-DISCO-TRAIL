@@ -14,7 +14,7 @@ class NewsController extends Controller
 {
     
     /**
-     * @Route("/news/dashboard", name="dashboard")
+     * @Route("/news", name="dashboard")
      */
     public function dashboardAction()
     {

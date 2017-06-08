@@ -7,11 +7,11 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     #esi: ~
-    #translator: { fallbacks: ['%locale%'] }
+    translator: { fallbacks: ['%locale%'] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -63,11 +63,12 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: '%mailer_transport%'
-    host: '%mailer_host%'
-    username: '%mailer_user%'
-    password: '%mailer_password%'
-    spool: { type: memory }
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    port:      "%mailer_port%"
+    spool:     { type: memory }
 
 # Assectic
 assetic:
@@ -89,13 +90,13 @@ ivory_ck_editor:
 
 # Elfinder
 fm_elfinder:
-    assets_path: /projects/CRAZYDISCOTRAIL/web/assets # default is /assets, this is where css/js elfinder files are
+    assets_path: /website/web/assets # default is /assets, this is where css/js elfinder files are
     instances:
         default:
             locale: %locale% # defaults to current request locale
             editor: ckeditor # other options are tinymce, tinymce4, fm_tinymce, form, simple, custom
             #editor_template: custom template for your editor # default null
-            #path_prefix: / # for setting custom assets path prefix, useful for non vhost configurations, i.e. http://127.0.0.1/mysite/
+            #path_prefix: '/web/assets' # for setting custom assets path prefix, useful for non vhost configurations, i.e. http://127.0.0.1/mysite/
             #fullscreen: true|false # default is true, applies to simple and ckeditor editors
             theme: smoothness # jquery theme, default is 'smoothness'
             include_assets: true # disable if you want to manage loading of javascript and css assets manually
@@ -112,3 +113,12 @@ fm_elfinder:
                         upload_max_size: 2M # also file upload sizes restricted in php.ini
                         #attributes: example of setting attributes permission
                             - { pattern: '/(.*?)/', read: true, write: true, locked: false }
+
+# Fos User
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: CrazyBundle\Entity\User
+    from_email:
+        address: "%mailer_user%"
+        sender_name: "%mailer_user%"

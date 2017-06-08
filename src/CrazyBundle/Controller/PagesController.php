@@ -7,6 +7,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 use CrazyBundle\Entity\News;
 
+use Symfony\Component\HttpFoundation\Request;
+
+use CrazyBundle\Form\BenevolesType;
+
 class PagesController extends Controller
 {
     /**
@@ -59,6 +63,36 @@ class PagesController extends Controller
     public function mentionsAction()
     {
         return $this->render('CrazyBundle:Pagesinternes:mentions-legales.html.twig');
+    }
+
+    /**
+     * @Route("/benevoles", name="benevoles")
+     */
+    public function benevolesAction(Request $request)
+    {
+        $form = $this->get('form.factory')->create(BenevolesType::class);
+
+        if($request->isMethod('POST') && $form->handleRequest($request)->isValid())
+        {
+            $data = $form->getData();
+
+            $message = \Swift_Message::newInstance()
+            ->setSubject('Formulaire bénévole Crazy Disco Trail')
+            ->setFrom('postmaster@herouvilledanslacourse.fr')
+            ->setTo('claire.bourdale@gmail.com')
+            ->setBody($this->renderView('Emails/registration.html.twig', array('data' => $data)), 'text/html');
+
+            $this->get('mailer')->send($message);
+
+            $request->getSession()->getFlashBag()->add('success', 'Merci pour votre participation ! Nous prendrons contact rapidement avec vous !');
+
+            return $this->redirectToRoute('benevoles');
+        }
+           
+    
+        
+        return $this->render('CrazyBundle:Pagesinternes:benevole.html.twig', array('form' => $form->createView(),
+        ));
     }
 
 }
