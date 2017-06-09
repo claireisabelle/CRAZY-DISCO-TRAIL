@@ -79,14 +79,16 @@ assetic:
 
 # Ivory CKEditor
 ivory_ck_editor:
+    default_config: my_config
     configs:
         my_config:
-            toolbar: [[TextColor', 'BGColor', '-', 'Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat', '-', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'], "/", ['Link', 'Unlink', '-', 'NumberedList', 'BulletedList', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'Image', 'Table', 'Smiley' ], "/", ['FontSize', '-', 'Source']]
+            toolbar: [['Youtube','TextColor', 'BGColor', '-', 'Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat', '-', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'], "/", ['Link', 'Unlink', '-', 'NumberedList', 'BulletedList', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'Image', 'Table', 'Smiley' ], "/", ['FontSize', '-', 'Source', 'Iframe']]
             uiColor:                "#D0D0D0"
             language: fr
             filebrowserBrowseRoute:     elfinder
             filebrowserBrowseRouteParameters:
                 instance: ckeditor
+    
 
 # Elfinder
 fm_elfinder:
