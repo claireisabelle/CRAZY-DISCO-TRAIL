@@ -20,12 +20,22 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-28978998-2', 'auto');
+    ga('send', 'pageview');
+
+    </script>
 
         <div class="container-fluid">
 
             <head>
                 <div class="logo vertical-align-logo">
-                        <img src="{{ asset('img/logo-2017-txt.png') }}" class="img-responsive center-block" alt="" title="" />
+                        <img src="{{ asset('img/logo-2017-txt-saint-lo.png') }}" class="img-responsive center-block" alt="" title="" />
                 </div><!-- /.logo -->
 
             </head>
@@ -56,10 +66,10 @@
                                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INFOS <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
                                     <li><a href="{{ path('infos_jourj') }}">Le Jour J</a></li>
-                                    <li><a href="{{ path('infos_dossards')}}">Retrait des dossards</a></li>
+                                    <!--<li><a href="{{ path('infos_dossards')}}">Retrait des dossards</a></li>-->
                                     <li><a href="{{ path('infos_acces') }}">Accès</a></li>
                                     <li><a href="{{ path('infos_reglement') }}">Réglement</a></li>
-                                    <li><a href="{{ path('infos_savoir') }}">Bon à savoir</a></li>
+                                    <!--<li><a href="{{ path('infos_savoir') }}">Bon à savoir</a></li>-->
                                     <li><a href="{{ path('infos_questions')}}">Questions fréquentes</a></li>
                                   </ul>
                                 </li>
@@ -96,14 +106,14 @@
                                 <li><a href="{{ path('contact') }}">Contact</a></li>
                                 <li><a href="{{ path('benevoles') }}">Bénévoles</a></li>
                                 <li><a href="{{ path('mentions')}}">Mentions légales</a></li>
-                                <li><a href=""><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+                                <li><a href="https://www.facebook.com/Crazy-Disco-Trail-342815289467873/"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
                             </a></li>
                             </ul>
                         </div><!-- /.col -->
 
                         <div class="col-xs-6 col-md-4">
                             <p><strong><span class="bleu">CRAZY DISCO TRAIL !</span></strong></p>
-                            <p>Un événement organisé par ...</p>
+                            <p>Un événement organisé par MATT event</p>
 
                             <p>Nos autres événéments : </p>
                             <p><a href="http://www.herouvilledanslacourse.com" target="_blank"><i class="fa fa-bolt" aria-hidden="true"></i>

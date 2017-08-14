@@ -79,7 +79,7 @@ class PagesController extends Controller
             $message = \Swift_Message::newInstance()
             ->setSubject('Formulaire bénévole Crazy Disco Trail')
             ->setFrom('postmaster@herouvilledanslacourse.fr')
-            ->setTo('claire.bourdale@gmail.com')
+            ->setTo('crazydiscotrail@gmail.com')
             ->setBody($this->renderView('Emails/registration.html.twig', array('data' => $data)), 'text/html');
 
             $this->get('mailer')->send($message);
