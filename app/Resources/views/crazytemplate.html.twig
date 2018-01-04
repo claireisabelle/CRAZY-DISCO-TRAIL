@@ -66,7 +66,7 @@
                                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INFOS <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
                                     <li><a href="{{ path('infos_jourj') }}">Le Jour J</a></li>
-                                    <!--<li><a href="{{ path('infos_dossards')}}">Retrait des dossards</a></li>-->
+                                    <li><a href="{{ path('infos_dossards')}}">Retrait des dossards</a></li>
                                     <li><a href="{{ path('infos_acces') }}">Accès</a></li>
                                     <li><a href="{{ path('infos_reglement') }}">Réglement</a></li>
                                     <!--<li><a href="{{ path('infos_savoir') }}">Bon à savoir</a></li>-->
@@ -74,6 +74,7 @@
                                   </ul>
                                 </li>
                                 <li class="{% if app.request.get('_route') == 'galeries' %} active {% endif %}"><a href="{{ path('galeries') }}">GALERIES</a></li>
+                                 <li class="{% if app.request.get('_route') == 'partenaires' %} active {% endif %}"><a href="{{ path('partenaires') }}">PARTENAIRES</a></li>
                                 <li class="{% if app.request.get('_route') == 'benevoles' %} active {% endif %}"><a href="{{ path('benevoles') }}">BENEVOLES</a></li>
                                 <li class="{% if app.request.get('_route') == 'contact' %} active {% endif %}"><a href="{{ path('contact') }}">CONTACT</a></li>
                               </ul>
@@ -116,12 +117,12 @@
                             <p>Un événement organisé par MATT event</p>
 
                             <p>Nos autres événéments : </p>
-                            <p><a href="http://www.herouvilledanslacourse.com" target="_blank"><i class="fa fa-bolt" aria-hidden="true"></i>
+                            <p><a href="http://www.audacieuseherouville.com" target="_blank"><i class="fa fa-bolt" aria-hidden="true"></i>
                              L'Audacieuse...</a><br />
-                             <a href="http://www.traldelangoisse.fr" target="_blank"><i class="fa fa-heartbeat" aria-hidden="true"></i>
+                             <a href="http://www.traildelangoisse.fr" target="_blank"><i class="fa fa-heartbeat" aria-hidden="true"></i>
                              Le Trail de l'Angoisse...</a></p>
 
-                             <p><br /><em><a href="https://www.arroweb.net">Développement : Arroweb</a></em></p>
+                             <p><br /><em><a href="https://arroweb.net">Développement : Arroweb</a></em></p>
 
                         </div><!-- /.col -->
 

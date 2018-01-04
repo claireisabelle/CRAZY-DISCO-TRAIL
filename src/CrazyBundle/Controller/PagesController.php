@@ -50,6 +50,14 @@ class PagesController extends Controller
     }
 
     /**
+     * @Route("/partenaires", name="partenaires")
+     */
+    public function partenairesAction()
+    {
+        return $this->render('CrazyBundle:Pagesinternes:partenaires.html.twig');
+    }
+
+    /**
      * @Route("/contact", name="contact")
      */
     public function contactAction()
